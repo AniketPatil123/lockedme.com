@@ -13,7 +13,7 @@ public class UserOptions {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String path="E:\\ani2\\Phase 1_ Assesment\\Loked_Me";
+		String path="E:\\ani2\\Phase 1_ Assesment\\Loked_Me";//root directory
 		Scanner sc=new Scanner(System.in);
 		boolean success=false;
 		System.out.println("********************************");
@@ -42,7 +42,9 @@ public class UserOptions {
 			
 			case 1:
 				System.out.println("Get the all files present in the directory");
-				File directoryPath=new File("E:\\ani2\\Phase 1_ Assesment\\Loked_Me");
+				//String Root=sc.next();
+				File directoryPath=new File(path);
+				//"E:\\ani2\\Phase 1_ Assesment\\Loked_Me"
 				File[] fileList=directoryPath.listFiles();
 				List<String> files=new ArrayList<String>();
 				for(File iterator:fileList) {
